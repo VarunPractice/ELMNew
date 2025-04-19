@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ELM.APIs.LicenseService.props" />
+</Project>

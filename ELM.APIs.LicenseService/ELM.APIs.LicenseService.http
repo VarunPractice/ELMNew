@@ -1,0 +1,6 @@
+@ELM.APIs.LicenseService_HostAddress = http://localhost:5240
+
+GET {{ELM.APIs.LicenseService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

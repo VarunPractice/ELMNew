@@ -1,0 +1,6 @@
+@ELM.APIs.AuthService_HostAddress = http://localhost:5244
+
+GET {{ELM.APIs.AuthService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
