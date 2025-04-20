@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  # License Service (ASP.NET Core API)
+  license-service:
+    image: license-service
+    build:
+      context: . # Root directory
+      dockerfile: ELM.APIs.LicenseService/Dockerfile # Path to Dockerfile
+    ports:
+      - "5001:80" # Map host port 5001 to container port 80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__LicenseDb=Server=sql-server;Database=ELM_Licenses;User=sa;Password=YourPassword123!;
+    depends_on:
+      - sql-server
+
+  # SQL Server Database
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPassword123!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - db-data:/var/opt/mssql
+
+volumes:
+  db-data:
