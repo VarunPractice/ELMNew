@@ -18,11 +18,8 @@ namespace ELM.WPF.UI
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+   public partial class LoginView : UserControl
     {
-        public LoginView()
-        {
-            InitializeComponent();
-        }
+        public LoginView() => InitializeComponent();
     }
 }

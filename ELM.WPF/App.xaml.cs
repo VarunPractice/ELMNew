@@ -19,21 +19,31 @@ public partial class App : Application
         var services = new ServiceCollection();
         ConfigureServices(services);
         ServiceProvider = services.BuildServiceProvider();
-        var mainWindow = new MainWindow();
+
+        // Get MainViewModel FIRST to ensure event subscription
+        var mainViewModel = ServiceProvider.GetRequiredService<MainViewModel>();
+
+        // THEN perform initial navigation
+        var navigationService = ServiceProvider.GetRequiredService<NavigationService>();
+        navigationService.NavigateTo<LoginViewModel>();
+
+        var mainWindow = new MainWindow { DataContext = mainViewModel };
         mainWindow.Show();
     }
 
     private void ConfigureServices(IServiceCollection services)
     {
-        // Add HttpClient with base address
         services.AddHttpClient("LicenseService", client =>
         {
             client.BaseAddress = new Uri("https://localhost:5001");
         });
 
-        services.AddSingleton<NavigationService>(); // Single instance for the app.
-        services.AddTransient<LoginViewModel>();    // New instance each time.
+        // Register services
+        services.AddSingleton<NavigationService>();
+
+        // Register ViewModels
+        services.AddTransient<LoginViewModel>();
         services.AddTransient<MainViewModel>();
-        services.AddTransient<MainWindow>();
+        services.AddTransient<HomeViewModel>();
     }
 }

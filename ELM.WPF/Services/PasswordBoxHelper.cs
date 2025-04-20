@@ -11,8 +11,12 @@ namespace ELM.WPF.Services
     public class PasswordBoxHelper
     {
         public static readonly DependencyProperty PasswordProperty =
-       DependencyProperty.RegisterAttached("Password", typeof(string), typeof(PasswordBoxHelper),
-       new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
+        DependencyProperty.RegisterAttached(
+            "Password",
+            typeof(string),
+            typeof(PasswordBoxHelper),
+            new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged)
+        );
 
         public static string GetPassword(DependencyObject obj) => (string)obj.GetValue(PasswordProperty);
         public static void SetPassword(DependencyObject obj, string value) => obj.SetValue(PasswordProperty, value);

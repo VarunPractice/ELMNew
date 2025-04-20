@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Varun\GitHubCode\NewELM\ELM.WPF\App.xaml
-21994121420
+3-213516856
 
-111476066273
+13-1171682952
 213-1821195052
-MainWindow.xaml;UI\LoginView.xaml;
+MainWindow.xaml;UI\HomeView.xaml;UI\LoginView.xaml;
 
 True
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ELM.WPF"
         mc:Ignorable="d"
         Title="ELM Admin" Height="450" Width="800">
-    <Grid>
+    <Grid Background="White" Margin="0">
         <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>
