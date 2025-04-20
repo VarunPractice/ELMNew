@@ -6,6 +6,7 @@ C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.GeneratedMSBui
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.AssemblyInfoInputs.cache
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.AssemblyInfo.cs
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.csproj.CoreCompileInputs.cache
+C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.sourcelink.json
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.dll
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\refint\ELM.Common.dll
 C:\Varun\GitHubCode\NewELM\ELM.Common\obj\Debug\net8.0\ELM.Common.pdb

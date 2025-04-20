@@ -1,4 +1,5 @@
-﻿using ELM.WPF.ViewModels;
+﻿using ELM.WPF.Services;
+using ELM.WPF.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -18,7 +19,7 @@ public partial class App : Application
         var services = new ServiceCollection();
         ConfigureServices(services);
         ServiceProvider = services.BuildServiceProvider();
-        var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+        var mainWindow = new MainWindow();
         mainWindow.Show();
     }
 
@@ -30,8 +31,9 @@ public partial class App : Application
             client.BaseAddress = new Uri("https://localhost:5001");
         });
 
-        // Register ViewModels and MainWindow
-        services.AddTransient<MainWindowViewModel>();
+        services.AddSingleton<NavigationService>(); // Single instance for the app.
+        services.AddTransient<LoginViewModel>();    // New instance each time.
+        services.AddTransient<MainViewModel>();
         services.AddTransient<MainWindow>();
     }
 }

@@ -40,6 +40,7 @@ C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.AssemblyInfoInputs.cache
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.AssemblyInfo.cs
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.csproj.CoreCompileInputs.cache
+C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.sourcelink.json
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.csproj.CopyComplete
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\ELM.Services.LicenseExpirationChecker.dll
 C:\Varun\GitHubCode\NewELM\ELM.Services.LicenseExpirationChecker\obj\Debug\net8.0\refint\ELM.Services.LicenseExpirationChecker.dll
