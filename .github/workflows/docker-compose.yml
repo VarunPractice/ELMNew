@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  license-service:
+    image: license-service
+    build:
+      context: .
+      dockerfile: ELM.APIs.LicenseService/Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__LicenseDb=Server=sql-server;Database=ELM_Licenses;User=sa;Password=YourStrongPassword123!;
+  
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrongPassword123!
+    ports:
+      - "1433:1433"
