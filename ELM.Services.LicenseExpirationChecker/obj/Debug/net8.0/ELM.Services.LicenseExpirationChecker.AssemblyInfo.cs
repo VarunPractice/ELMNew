@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ELM.Services.LicenseExpirationChecker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c623b29c1267c90958b6578a32ca9c4b24226daf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d40d8a7c2fe620c75162dbbc2d5089737abffce1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ELM.Services.LicenseExpirationChecker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ELM.Services.LicenseExpirationChecker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

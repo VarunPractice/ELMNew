@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ELM.APIs.LicenseService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d40d8a7c2fe620c75162dbbc2d5089737abffce1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ELM.APIs.LicenseService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ELM.APIs.LicenseService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
