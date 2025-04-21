@@ -10,7 +10,7 @@ namespace ELM.WPF.ViewModels
     {
         public HomeViewModel()
         {
-            Title = "Home";
+            Title = "Welcome to home of ELM";
         }
     }
 }
