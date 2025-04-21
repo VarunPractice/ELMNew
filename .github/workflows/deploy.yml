@@ -7,7 +7,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   GCR_REGISTRY: gcr.io/$PROJECT_ID
-
+  REGION: us-central1  
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -29,18 +29,25 @@ jobs:
       - name: Build and Push License Service
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: .  
           file: ELM.APIs.LicenseService/Dockerfile
-          tags: ${{ env.GCR_REGISTRY }}/license-service:latest
+          tags: |
+            ${{ env.GCR_REGISTRY }}/license-service:latest
+            ${{ env.GCR_REGISTRY }}/license-service:${{ github.sha }}
           push: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-  deploy-to-gke:
+  deploy-to-cloudrun:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Google Kubernetes Engine
+      - name: Deploy to Google Cloud Run
         uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: license-service
           image: ${{ env.GCR_REGISTRY }}/license-service:latest
           credentials: ${{ secrets.GCP_SA_KEY }}
+          region: ${{ env.REGION }}  
+          platform: managed   
+          allow-unauthenticated: true  #  
